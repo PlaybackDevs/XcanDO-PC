@@ -138,6 +138,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="DX11System.h" />
     <ClInclude Include="ExceptClass.hpp" />
     <ClInclude Include="Logger.hpp" />
     <ClInclude Include="Resource.h" />
@@ -147,6 +148,7 @@
     <ClInclude Include="XcandoEngine.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DX11System.cpp" />
     <ClCompile Include="ExceptClass.cpp" />
     <ClCompile Include="Logger.cpp" />
     <ClCompile Include="stdafx.cpp">
