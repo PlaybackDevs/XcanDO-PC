@@ -16,6 +16,11 @@
 #include <malloc.h>
 #include <memory.h>
 #include <tchar.h>
+#include <stdio.h>
+#include <d3d11.h>
+#include "ExceptClass.hpp"
+#include "termcolor.hpp"
+#include "Logger.hpp"
 
 
 // TODO: reference additional headers your program requires here

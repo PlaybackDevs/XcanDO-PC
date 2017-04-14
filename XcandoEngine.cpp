@@ -1,8 +1,9 @@
-// XcandoEngine.cpp : Defines the entry point for the application.
+// XcandoEngine.cpp 
 //
 
 #include "stdafx.h"
 #include "XcandoEngine.h"
+
 
 #define MAX_LOADSTRING 100
 
@@ -24,6 +25,12 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 {
     UNREFERENCED_PARAMETER(hPrevInstance);
     UNREFERENCED_PARAMETER(lpCmdLine);
+#ifdef _DEBUG
+	AllocConsole();
+	freopen("conin$", "r", stdin);
+	freopen("conout$", "w", stdout);
+	freopen("conout$", "w", stderr);
+#endif
 
     // TODO: Place code here.
 
@@ -38,6 +45,8 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
         return FALSE;
     }
 
+	Logger::Log("Test 1234 ABC", __FILE__, __LINE__);
+
     HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_XCANDOENGINE));
 
     MSG msg;
@@ -51,6 +60,8 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
             DispatchMessage(&msg);
         }
     }
+
+
 
     return (int) msg.wParam;
 }
